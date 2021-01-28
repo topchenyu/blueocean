@@ -1,10 +1,20 @@
+Jenkinsfile (Declarative Pipeline)
 pipeline {
-    agent any
-
+    agent any 
     stages {
-        stage('Hello') {
+        stage('Build') { 
             steps {
-                echo 'Thank you very much!'
+                echo "Building" 
+            }
+        }
+        stage('Test') { 
+            steps {
+                echo "Testing" 
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                echo "Deploying" 
             }
         }
     }
